@@ -2,17 +2,26 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "cargo build",
-            "type": "shell",
-            "command": "cargo build",
-            "problemMatcher": ["$rustc"],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
+            "label": "cargo build for debug",
+            "type": "process",
+            "command": "cargo",
+            "args": [
+                "build",
+                "--package", "${input:projectName}",
+                "--message-format=json"
+            ],
+            "problemMatcher": "$rustc",
             "options": {
-                "cwd": "${workspaceFolder}/my_first_rust_code"
+                "cwd": "${workspaceFolder}/${input:projectName}"
             }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "projectName",
+            "type": "promptString",
+            "description": "Enter project folder name (e.g. 'trytry')",
+            "default": "my_first_rust_code"
         }
     ]
 }

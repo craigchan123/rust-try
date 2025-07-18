@@ -4,11 +4,19 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug my_first_rust_code",
-            "program": "${workspaceFolder}/my_first_rust_code/target/debug/my_first_rust_code",
+            "name": "Debug Rust",
+            "program": "${workspaceFolder}/${input:projectName}/target/debug/${input:projectName}",
             "args": [],
-            "cwd": "${workspaceFolder}/my_first_rust_code",
-            "preLaunchTask": "cargo build"
+            "cwd": "${workspaceFolder}/${input:projectName}",
+            "preLaunchTask": "cargo build for debug"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "projectName",
+            "type": "promptString",
+            "description": "Enter project folder name (e.g. 'trytry')",
+            "default": "my_first_rust_code"
         }
     ]
 }
