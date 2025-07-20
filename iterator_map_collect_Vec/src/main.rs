@@ -10,6 +10,7 @@ fn john (a : i32, b : i32) -> i32 {
 }
 
 // closure functions can take things in the environment
+// variables are immutable by default
 fn main () {
    let josh: Vec<i32>   = vec![14, 3, 19, 101, 0];
    let tom = |multiplier|{
