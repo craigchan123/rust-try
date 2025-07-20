@@ -16,8 +16,11 @@ fn main () {
         9 + (multiplier - 2 ) * CLOSUREADDON
    };
    // Vec<> is a dynamic array, can put any type of one-category data in it
+   //.iter() means that we iterate/borrow the josh vector immutably, and it yields "references" of the elements
+   // so we need to dereference it with &, thus &i32
    // josh.iter() means that we iterate/borrow the josh vector immutably
    // .map() means Modify All Pieces of the borrowed stuff 
+   // and .map() can transform the data
    // !!.iter().map().filter().collect() is the common pattern
    // without .collect(), .map will not show the result
    // tom(*resemblejosh) means to take the value of the vector josh, dereference it, and then use in tom

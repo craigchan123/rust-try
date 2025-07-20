@@ -1,13 +1,7 @@
-
-const BASE: i32 = 10;
-
-fn nonnnto (g: i32 , t: i32) -> i32 {
-    g * t
+fn main() {
+    println!("Hello, world!");
+    let x = 5;
+    let y = 26;
+    let z = x + y;
+    println!("The sum of {} and {} is {}", x, y, z);
 }
-fn main () {
-    let r = |portionmultiplier|{
-    (BASE + 94) * portionmultiplier + nonnnto (8 , 6)
-};
-println! ("the result is : {}", r(22));
-}
-
