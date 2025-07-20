@@ -16,7 +16,7 @@
             "id": "projectName",
             "type": "promptString",
             "description": "Enter project folder name (e.g. 'trytry')",
-            "default": "my_first_rust_code"
+            "default": "trytry"
         }
     ]
 }
