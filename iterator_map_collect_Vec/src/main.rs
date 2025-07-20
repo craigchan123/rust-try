@@ -1,4 +1,5 @@
 const GEORGE: i32 = 88;
+const CLOSUREADDON: i32 = 13;
 const VALUE_A: i32 = 5 ;
 const VALUE_B: i32 = 19 ;
 
@@ -8,10 +9,11 @@ fn john (a : i32, b : i32) -> i32 {
     a + b / 3       //if keep decimals, use f64 instead of i32. and all values should be f64 and end with .0
 }
 
+// closure functions can take things in the environment
 fn main () {
    let josh: Vec<i32>   = vec![14, 3, 19, 101, 0];
    let tom = |multiplier|{
-        9 + multiplier - 2 
+        9 + (multiplier - 2 ) * CLOSUREADDON
    };
    // Vec<> is a dynamic array, can put any type of one-category data in it
    // josh.iter() means that we iterate/borrow the josh vector immutably
